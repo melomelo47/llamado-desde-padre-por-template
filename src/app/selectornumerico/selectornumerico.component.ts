@@ -9,24 +9,23 @@ export class SelectornumericoComponent implements OnInit {
 
   valorVariable:number;
   maximo:number;
-  minimo:number; 
+  minimo:number;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  incrementar(){
+  public incrementar(){
       if(this.valorVariable >= this.maximo){
           this.valorVariable++;
       }
   }
 
-  decrementar(){
+  public decrementar(){
       if(this.valorVariable <= this.minimo){
           this.valorVariable--;
       }
   }
 
-  fijar(numeroFijo:number){
+  public fijar(numeroFijo:number){
       this.valorVariable = numeroFijo;
   }
 
