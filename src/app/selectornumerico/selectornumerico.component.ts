@@ -16,13 +16,13 @@ export class SelectornumericoComponent implements OnInit {
   }
 
   public incrementar(){
-      if(this.valorVariable <= this.maximo){
+      if(this.valorVariable < this.maximo){
           this.valorVariable++;
       }
   }
 
   public decrementar(){
-      if(this.valorVariable >= this.minimo){
+      if(this.valorVariable > this.minimo){
           this.valorVariable--;
       }
   }
