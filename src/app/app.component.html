@@ -1,4 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-selectornumerico minimo="1" maximo="20" #selector1></app-selectornumerico>
+<br>
+<button (click)="fijarSelector1(1)">Fijar 1</button>
+<button (click)="fijarSelector1(10)">Fijar 10</button>
+<button (click)="fijarSelector1(20)">Fijar 20</button>
+<br>
+<br>
+
+<app-selectornumerico minimo="1" maximo="20" #selector2></app-selectornumerico>
+<br>
+<button (click)="fijarSelector2(1)">Fijar 1</button>
+<button (click)="fijarSelector2(10)">Fijar 10</button>
+<button (click)="fijarSelector2(20)">Fijar 20</button>

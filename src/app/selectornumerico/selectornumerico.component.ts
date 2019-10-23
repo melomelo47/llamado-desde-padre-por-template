@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-selectornumerico',
@@ -8,19 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class SelectornumericoComponent implements OnInit {
 
   valorVariable:number;
-  maximo:number;
-  minimo:number;
+  @Input() maximo:number;
+  @Input() minimo:number;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.valorVariable = this.minimo;
+  }
 
   public incrementar(){
-      if(this.valorVariable >= this.maximo){
+      if(this.valorVariable <= this.maximo){
           this.valorVariable++;
       }
   }
 
   public decrementar(){
-      if(this.valorVariable <= this.minimo){
+      if(this.valorVariable >= this.minimo){
           this.valorVariable--;
       }
   }
